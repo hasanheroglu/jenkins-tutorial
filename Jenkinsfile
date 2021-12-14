@@ -6,5 +6,23 @@ pipeline {
 				echo 'Building...'
 			}
 		}
+
+		stage ('Test') {
+			steps {
+				echo 'Testing...'
+			}
+		}
+
+		stage ('Deploy') {
+			steps {
+				echo 'Deploying...'
+			}
+		}
+	}
+
+	post {
+		success {
+			echo 'Everything went fine...'
+		}
 	}
 }
